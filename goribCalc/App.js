@@ -5,9 +5,9 @@ const y = 20;
 let oprerator = -1;
 let exit = 0;
 
-while (oprerator !== exit) {
+while (true) {
   oprerator = prompt("Enter an operator (+, -, *, ,/) or 0 to exit: ");
-  if (oprerator === 0) {
+  if (oprerator === "0") {
     console.log("exit");
     break;
   }
@@ -22,6 +22,7 @@ while (oprerator !== exit) {
     console.log("Divition of x and y are: " + x / y);
   } else {
     console.log("Invalid input");
+    continue;
   }
   let next = prompt("Do you want to continue: 1 for Yes, 2 for No");
   if (next === "1") {
@@ -31,6 +32,6 @@ while (oprerator !== exit) {
     break;
   } else {
     console.log("Invalid input 1/0");
-    oprerator = 0;
+    break
   }
 }
